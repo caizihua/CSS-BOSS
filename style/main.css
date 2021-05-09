@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #7e8793;
+  font-family: Arial, Helvetica, "Microsoft Yahei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #7e8793;
+}
+
+.home-header {
+  background: url("../images/home-bg.png") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.home-header>img {
+  width: 67%;
+  margin: 2.3rem;
+}
+
+.home-header form {
+  background: white;
+  width: 92%;
+  margin: 0 auto;
+  line-height: 2.2rem;
+  border-radius: 2.2rem;
+}
+
+.home-header form input {
+  color: #aaa;
+  font-size: .85rem;
+  width: 75%;
+  line-height: 2.1rem;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.home-header form button {
+  font-size: .9rem;
+  color: #5bd4c7;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.home-categories {
+  padding: 0 1rem;
+}
+
+.home-categories dt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #333;
+}
+
+.home-categories dt img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.home-categories dd {
+  margin: 0 -.4rem;
+}
+
+.home-categories dd .tag {
+  background-color: #f5f8f9;
+  padding: .5rem 1rem;
+  display: inline-block;
+  border-radius: 2rem;
+  margin: .2rem .4rem;
+  font-size: .8rem;
+}
+
+.home-footer {
+  width: 70%;
+  margin: 0 auto;
+  font-size: .75rem;
+}
+
+.home-footer p {
+  margin: .2rem 0;
+}
