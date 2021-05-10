@@ -1,5 +1,156 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.list-header {
+  padding: .8rem 1rem;
+}
+
+.list-header img {
+  height: 1.2rem;
+}
+
+.list-header form {
+  width: 100%;
+}
+
+.list-header form .inner {
+  width: 100%;
+  background: #f5f8f9;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  line-height: 1.7rem;
+  border-radius: 2rem;
+  padding: 0 .5rem;
+}
+
+.list-header form .inner input {
+  flex: 1;
+  background: transparent;
+  color: #aaa;
+
+}
+
+.list-header form .inner span {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.list-header form button {
+  font-size: .9rem;
+  color: #5bd4c7;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.filter {
+  padding: .5rem 1rem;
+  border: 1px solid #f5f8f9;
+}
+
+.filter dl,
+filter dd {
+  margin: 0;
+}
+
+.filter dt {
+  font-size: .7rem;
+  color: #aaa;
+}
+
+.filter dt:after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #999;
+  border-style: solid none none solid;
+  transform: rotate(225deg);
+  transition: all .3s;
+  margin-bottom: .2rem;
+  margin-left: .5rem;
+}
+
+.filter .active dt {
+  color: #333;
+}
+
+.filter .active dt:after {
+  margin-bottom: 0;
+  transform: rotate(45deg);
+}
+
+.filter dd {
+  display: none;
+  margin: 0;
+}
+
+.filter .active dd {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 90px;
+  left: 0;
+}
+
+.filter .active dd ul {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.filter .active dd ul li {
+  line-height: 3.5rem;
+  text-indent: 1rem;
+  color: #aaa;
+}
+
+.filter .active dd ul li.active {
+  background-color: #f5f8f9;
+  color: #333;
+}
+
+.job-list {
+  margin: 0;
+  padding: 0;
+}
+
+.job-item {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f5f8f9;
+
+}
+
+.job-item>img {
+  height: 3.5rem;
+  border-radius: .3rem;
+}
+
+.job-item .text {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.job-item .title {
+  color: #333;
+}
+
+.job-item .salary {
+  font-size: 1.2rem;
+  color: #fc6c38;
+}
+
+.job-item .company {
+  color: #333;
+  font-size: .6rem;
+  margin: .1rem 0;
+}
+
+.job-item .props {
+  font-size: .4rem;
+  margin-top: .2rem;
+  color: #aaa;
+}
+
+.job-item .props span {
+  margin-right: .5rem;
 }

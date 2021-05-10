@@ -9,86 +9,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <div class="home-header">
         <img src="./images/home-search-text.png" alt="" />
         <form action="">
-          <input type="text" / placeholder="搜索职位/公司">
+          <input type="text" placeholder="搜索职位/公司" />
           <button>搜索</button>
         </form>
       </div>
       <div class="home-categories">
-        <dl>
+        <dl v-for="item in categories" :key="item.index">
           <dt>
-            <img src="./images/technology.png" alt="" />
-            <div>技术</div>
+            <img :src="item.icon" alt="" />
+            <div>{{item.name}}</div>
           </dt>
           <dd>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="home-categories">
-        <dl>
-          <dt>
-            <img src="./images/technology.png" alt="" />
-            <div>技术</div>
-          </dt>
-          <dd>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="home-categories">
-        <dl>
-          <dt>
-            <img src="./images/technology.png" alt="" />
-            <div>技术</div>
-          </dt>
-          <dd>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="home-categories">
-        <dl>
-          <dt>
-            <img src="./images/technology.png" alt="" />
-            <div>技术</div>
-          </dt>
-          <dd>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="home-categories">
-        <dl>
-          <dt>
-            <img src="./images/technology.png" alt="" />
-            <div>技术</div>
-          </dt>
-          <dd>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
-            <a href="" class="tag">Java</a>
+            <a href="" class="tag" v-for="tag in item.tags"> {{tag}} </a>
           </dd>
         </dl>
       </div>
@@ -103,5 +39,47 @@
         </p>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          categories: [
+            {
+              icon: "./images/technology.png",
+              name: "技术",
+              tags: [
+                "Java",
+                "PHP",
+                "Web前端",
+                "数据挖掘",
+                "C++",
+                "Python",
+                "Android",
+              ],
+            },
+            {
+              icon: "./images/product.png",
+              name: "产品",
+              tags: ["产品经理", "产品助理", "网页产品经理", "数据产品经理"],
+            },
+            {
+              icon: "./images/market.png",
+              name: "市场",
+              tags: [
+                "市场营销",
+                "商务渠道",
+                "品牌公关",
+                "市场总监",
+                "策划经理",
+                "活动策划",
+                "SEO",
+                "SEM",
+              ],
+            },
+          ],
+        },
+      });
+    </script>
   </body>
 </html>

@@ -6,9 +6,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: #7e8793;
+}
+
+ul,
+li {
+  list-style: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.padded {
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home-header {

@@ -1,0 +1,280 @@
+.top-bar img {
+  height: 1rem;
+}
+
+.top-bar form {
+  width: 40%;
+  border: 1px solid #5bd4c7;
+  border-radius: 2rem;
+  padding: 0 .5rem;
+}
+
+.top-bar form input {
+  border: none;
+  background: none;
+  line-height: 1.5rem;
+  width: 80%;
+  color: #c0c4cf;
+  font-size: .7rem;
+}
+
+.top-bar form input::placeholder {
+  color: #c0c4cf;
+  font-size: .7rem;
+}
+
+.top-bar form button {
+  border: none;
+  background: url("../images/icons.png") no-repeat top center;
+  background-size: 100% auto;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.job-info {
+  background: #62d5c8;
+  color: #fff;
+}
+
+.job-info title {
+  font-size: 1.2rem;
+}
+
+.job-info .props {
+  font-size: .8rem;
+  margin: .5rem 0;
+}
+
+.job-info .props .items i {
+  display: inline-block;
+  width: 1px;
+  height: .8rem;
+  background-color: #fff;
+  margin: 0 .5rem;
+}
+
+.job-info .tags span {
+  border: 1px solid #fff;
+  padding: .2rem .5rem;
+  border-radius: 2rem;
+  font-size: .75rem;
+}
+
+.user-info {
+  background-color: #eefbf9;
+}
+
+.user-info>img {
+  height: 3.5rem;
+  border-radius: 3.5rem;
+}
+
+.user-info>button {
+  background-color: #5bd4c7;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.btn {
+  font-size: .9rem;
+  padding: .5rem 1.2rem;
+  border-radius: 2rem;
+}
+
+.user-info .name {
+  color: #333;
+}
+
+.user-info .name .like {
+  font-size: .6rem;
+  color: #fb7042;
+}
+
+.user-info .name .like img {
+  margin-right: .3rem;
+}
+
+.user-info .desc {
+  font-size: .8rem;
+  margin-top: .5rem;
+  color: #aaa;
+}
+
+.user-info .info {
+  width: 40%;
+  margin: 0 1rem;
+}
+
+.job-detail h3 {
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+
+}
+
+.job-detail h3:after {
+  content: "";
+  width: 1rem;
+  height: 1px;
+  display: inline-block;
+  background-color: #62d5c8;
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+}
+
+.job-detail .text {
+  font-size: .9rem;
+  line-height: 1.6rem;
+  margin-top: 1rem;
+}
+
+.job-detail .tags {
+  padding-top: .7rem;
+}
+
+.job-detail .tags span {
+  font-size: .7rem;
+  color: #5bd4c7;
+  border: 1px solid #5bd4c7;
+  border-radius: 2rem;
+  padding: .1rem .5rem;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  display: inline-block;
+}
+
+.job-detail .text table {
+  align-items: flex-start;
+  border: 1px solid #ebecef;
+  padding: .7rem;
+  font-size: .75rem;
+}
+
+.job-detail .text table td {
+  width: 10rem;
+  font-weight: normal;
+  color: #9fa3b0;
+  vertical-align: top;
+}
+
+.job-detail .text table .td {
+  color: #7e8793;
+}
+
+.grey {
+  color: #9fa3b0;
+}
+
+.company-info {
+  background: #eefbf9;
+}
+
+.company-info img {
+  height: 3.5rem;
+  border-radius: 3.5rem;
+}
+
+.company-info .info {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.company-info .info .name {
+  color: #333;
+}
+
+.company-info .info .name .btn {
+  background: #5dd5c8;
+  color: #fff;
+  font-size: .8rem;
+}
+
+.company-info .info .desc {
+  font-size: .8rem;
+  color: #333;
+}
+
+.company-info .info .tags2 {
+  margin-top: .5rem;
+  font-size: .75rem;
+}
+
+.company-info .info .tags2 i {
+  display: inline-block;
+  width: 1px;
+  height: .8rem;
+  background-color: #9fa3af;
+  margin: -0.1rem .5rem;
+  line-height: 10rem
+}
+
+.related-jobs h3 {
+  color: #7e8793;
+  font-weight: normal;
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.job-detail .related-jobs h3:after {
+  display: none;
+}
+
+.related-jobs li:first-of-type {
+  margin-top: 1rem;
+}
+
+.related-jobs li {
+  border-top: 1px solid #ebecef;
+}
+
+.related-jobs li .job-item {
+  margin: 1rem 0 0;
+}
+
+.related-jobs li .job-item>.text {
+  margin-top: 0;
+}
+
+.related-jobs .btn {
+  border: 1px solid #5dd5c8;
+  color: #5dd5c8;
+  background: none;
+  padding: .4rem 1.2rem;
+  margin-top: .2rem;
+}
+
+.related-companies h3 {
+  color: #7e8793;
+  font-weight: normal;
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.related-companies .tags {
+  margin: .2rem;
+}
+
+.related-companies .tags a {
+  font-size: .7rem;
+  line-height: 1.2rem;
+  margin-right: .5rem;
+}
+
+.job-footer {
+  padding: 1rem 0;
+  line-height: 1.2rem;
+  border-top: 1px solid #ebebeb;
+}
+
+.breadcrumb-nav {
+  color: #7e8793;
+  font-weight: normal;
+  font-size: .7rem;
+  margin-bottom: 0;
+}
+
+.breadcrumb-nav a {
+  margin: 0 -1px 0 .5rem;
+}
