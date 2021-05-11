@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "./images/technology.png",
+    "name": "技术",
+    "tags": ["Java", "PHP", "Web前端", "数据挖掘", "C++", "Python", "Android"]
+  },
+  {
+    "icon": "./images/product.png",
+    "name": "产品",
+    "tags": ["产品经理", "产品助理", "网页产品经理", "数据产品经理"]
+  },
+  {
+    "icon": "./images/market.png",
+    "name": "市场",
+    "tags": [
+      "市场营销",
+      "商务渠道",
+      "品牌公关",
+      "市场总监",
+      "策划经理",
+      "活动策划",
+      "SEO",
+      "SEM"
+    ]
+  }
+]

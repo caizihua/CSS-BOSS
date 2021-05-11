@@ -1,85 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>「成都招聘网」-海量成都人才招聘信息 - BOSS直聘</title>
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
-  </head>
-  <body>
-    <div class="container" id="app">
-      <div class="home-header">
-        <img src="./images/home-search-text.png" alt="" />
-        <form action="">
-          <input type="text" placeholder="搜索职位/公司" />
-          <button>搜索</button>
-        </form>
-      </div>
-      <div class="home-categories">
-        <dl v-for="item in categories" :key="item.index">
-          <dt>
-            <img :src="item.icon" alt="" />
-            <div>{{item.name}}</div>
-          </dt>
-          <dd>
-            <a href="" class="tag" v-for="tag in item.tags"> {{tag}} </a>
-          </dd>
-        </dl>
-      </div>
-      <div class="home-footer">
-        <p>违法和不良信息举报邮箱：jubao@kanzhun.com</p>
-        <p>企业服务热线和举报投诉：400 065 5799</p>
-        <p>
-          <a href="">人力资源服务许可证</a>
-        </p>
-        <p>
-          <a href="">网上有害信息举报专区</a>
-        </p>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>「成都招聘网」-海量成都人才招聘信息 - BOSS直聘</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+</head>
+
+<body>
+  <div class="container" id="app">
+    <div class="home-header">
+      <img src="./images/home-search-text.png" alt="" />
+      <form action="">
+        <input type="text" placeholder="搜索职位/公司" />
+        <button>搜索</button>
+      </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script>
-      new Vue({
-        el: "#app",
-        data: {
-          categories: [
-            {
-              icon: "./images/technology.png",
-              name: "技术",
-              tags: [
-                "Java",
-                "PHP",
-                "Web前端",
-                "数据挖掘",
-                "C++",
-                "Python",
-                "Android",
-              ],
-            },
-            {
-              icon: "./images/product.png",
-              name: "产品",
-              tags: ["产品经理", "产品助理", "网页产品经理", "数据产品经理"],
-            },
-            {
-              icon: "./images/market.png",
-              name: "市场",
-              tags: [
-                "市场营销",
-                "商务渠道",
-                "品牌公关",
-                "市场总监",
-                "策划经理",
-                "活动策划",
-                "SEO",
-                "SEM",
-              ],
-            },
-          ],
-        },
-      });
-    </script>
-  </body>
+    <div class="home-categories">
+      <dl v-for="item in categories" :key="item.index">
+        <dt>
+          <img :src="item.icon" alt="" />
+          <div>{{item.name}}</div>
+        </dt>
+        <dd>
+          <a href="" class="tag" v-for="tag in item.tags"> {{tag}} </a>
+        </dd>
+      </dl>
+    </div>
+    <div class="home-footer">
+      <p>违法和不良信息举报邮箱：jubao@kanzhun.com</p>
+      <p>企业服务热线和举报投诉：400 065 5799</p>
+      <p>
+        <a href="">人力资源服务许可证</a>
+      </p>
+      <p>
+        <a href="">网上有害信息举报专区</a>
+      </p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        categories: [],
+      },
+      created: function () {
+        fetch("http://127.0.0.1:5500/CSS-BOSS/api/index.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            this.categories = data;
+          });
+      },
+    });
+  </script>
+</body>
+
 </html>

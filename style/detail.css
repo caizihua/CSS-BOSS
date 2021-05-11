@@ -57,6 +57,7 @@
 .job-info .tags span {
   border: 1px solid #fff;
   padding: .2rem .5rem;
+  margin-right: .4rem;
   border-radius: 2rem;
   font-size: .75rem;
 }
