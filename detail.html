@@ -37,7 +37,7 @@
         <span v-for="label in job.labels"> {{label}} </span>
       </div>
     </div>
-    <div class="user-info flex padded">
+    <div class="user-info flex padded" v-if="job.user">
       <img :src="job.user.avatar" alt="" />
       <div class="info">
         <div class="flex name">
@@ -51,7 +51,7 @@
       </div>
       <button class="btn">立即沟通</button>
     </div>
-    <div class="job-detail padded">
+    <div class="job-detail padded" v-if="job.company">
       <h3>职位描述</h3>
       <div class="text" v-html="job.body"> </div>
       <h3>团队介绍</h3>
@@ -112,13 +112,13 @@
           </a>
         </li>
       </div>
-      <div class="related-companies">
+      <div class="related-companies" v-if="job.companies">
         <h3>推荐公司：</h3>
         <div class="tags">
           <a href="" v-for="item in job.companies">{{item.name}}</a>
         </div>
       </div>
-      <div class="job-footer breadcrumb-nav">
+      <div class="job-footer breadcrumb-nav" v-if="job.path">
         <template v-for="(tag,index) in job.path">
           <span v-if="index > 0">&nbsp;></span> <a :href="tag.url">{{tag.name}}</a>
         </template>
@@ -131,92 +131,7 @@
     new Vue({
       el: "#app",
       data: {
-        job: {
-          "logo": "./images/1.jfif",
-          "title": "web前端开发工程师",
-          "salary": "7-12k",
-          "company": "同程艺龙",
-          "tags": ["上海", "1年以内", "大专"],
-          "published_at": "2021-05-11T07:40:29.759Z",
-          "labels": ["vue.js", "react", "node.js"],
-          "user": {
-            "avatar": "./images/2.jfif",
-            "name": "李先生",
-            "title": "同程艺龙·软件工程师"
-          },
-          "body": "部门介绍<br />同程旅行成都研发中心中台部门，这里有牛人老板和队友、广阔的发展空间，有快速发展的业务锻炼机会，能有机会应用更多的新技术，目前主要维护一套多平台CMS可视化活动建站平台，以及一套类似于有赞的电商小程序，还能有更多前端工程化方面尝试的等你一起来落地。<br />【视频面试，效率高，争取一天走完流程直达HR】<br />【校招、初、中、高、资深、专家均有岗位】<br />我们对你的期望<br />1.本科及以上学历(能力突出者可放宽)。<br />2.有前端工程化CI/CD相关经验。<br />3.有丰富的小程序、H5、多端融合的开发经验。<br />4.熟悉vue或者React、redux、react-router以及相关生态<br />5.有做过可视化活动建站平台或电商业务更佳。<br />加分项<br />1.有github开源项目，或相关贡献。<br />2.能快速学习，能够阅读英文文档<br />3.有node研发经历<br />4.有知名公司工作经历<br />5.技术思维严谨，能够善于发现问题，拥有良好的编程习惯。",
-          "team": ["公司氛围好", "不打卡", "领导nice"],
-          "company": {
-            "name": "嘉实集团",
-            "full_name": "上海嘉实（集团）有限公司",
-            "tags": ["工程施工", "不需要施工", "100-499人"],
-            "logo": "./images/company-logo.jpg",
-            "body": "同程艺龙由同程旅游集团旗下的同程网络板块和艺龙旅行网在2017年底合并而成。<br />同程旅游集团是一个多元化旅游集团，中国在线旅游服务商和一站式旅游预订平台，是“中国民营企业500强”和“中国旅游集团20强”企业。同程旅游集团下辖同程网络和同程控股两大板块",
-            "props": {
-              "a": "吴志祥",
-              "b": "20000万人民币",
-              "c": "2004-03-10",
-              "d": "存续（在营、开业、在册）",
-            },
-            "jobs": [{
-              "logo": "./images/1.jfif",
-              "title": "web前端开发工程师",
-              "salary": "7-12k",
-              "company": "同程艺龙",
-            }, {
-              "logo": "./images/1.jfif",
-              "title": "web前端开发工程师",
-              "salary": "7-12k",
-              "company": "同程艺龙",
-            }, {
-              "logo": "./images/1.jfif",
-              "title": "web前端开发工程师",
-              "salary": "7-12k",
-              "company": "同程艺龙",
-            }]
-          },
-          "companies": [{
-            "id": 1,
-            "name": "Jasan Group"
-          }, {
-            "id": 2,
-            "name": "成都瀛沣商贸有限公司"
-          }, {
-            "id": 3,
-            "name": "莆田市鑫宝格贸易有限公司"
-          }, {
-            "id": 4,
-            "name": "青岛仁居家具有限公司"
-          }, {
-            "id": 5,
-            "name": "苍南县绿地神化化工有限公司"
-          }, {
-            "id": 6,
-            "name": "中山市祥荣运输有限公司"
-          }, {
-            "id": 7,
-            "name": "青岛三友机电工程有限公司"
-          }, {
-            "id": 8,
-            "name": "深圳房产营销储备干部招聘"
-          }, {
-            "id": 9,
-            "name": "云朵创意美术馆书法老师招聘"
-          }],
-          "path": [{
-            "name": "首页",
-            "url": "/"
-          }, {
-            "name": "成都招聘·web前端招聘",
-            "url": "/"
-          }, {
-            "name": "成都web前端招聘",
-            "url": "/"
-          }, {
-            "name": "同程艺龙web前端开发工程师招聘",
-            "url": "/"
-          }]
-        },
+        job: {}
       },
       created: function () {
         fetch("http://127.0.0.1:5500/CSS-BOSS/api/filters.json")
@@ -232,6 +147,13 @@
           })
           .then((data) => {
             this.jobs = data;
+          });
+        fetch("http://127.0.0.1:5500/CSS-BOSS/api/job.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            this.job = data;
           });
       },
     })
